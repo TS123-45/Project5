@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease;
+    background-color: #f5f5f5;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Mood Buttons */
+.mood-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mood-btn {
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mood-btn span {
+    font-weight: bold;
+}
+
+/* Mood-Specific Button Colors */
+.mood-btn[data-mood="happy"] {
+    background: #FFD700;
+}
+.mood-btn[data-mood="sad"] {
+    background: #6495ED;
+    color: white;
+}
+.mood-btn[data-mood="excited"] {
+    background: #FF4500;
+    color: white;
+}
+.mood-btn[data-mood="calm"] {
+    background: #20B2AA;
+    color: white;
+}
+
+/* Hover Effects */
+.mood-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pseudo-element decoration */
+.container::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .mood-container {
+        flex-direction: column;
+    }
+}

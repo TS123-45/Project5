@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How Are You Feeling Today?</h1>
+        <div class="mood-container">
+            <button class="mood-btn" data-mood="happy" data-color="#FFD700">
+                😊 <span>Happy</span>
+            </button>
+            <button class="mood-btn" data-mood="sad" data-color="#6495ED">
+                😢 <span>Sad</span>
+            </button>
+            <button class="mood-btn" data-mood="excited" data-color="#FF4500">
+                🤩 <span>Excited</span>
+            </button>
+            <button class="mood-btn" data-mood="calm" data-color="#20B2AA">
+                😌 <span>Calm</span>
+            </button>
+        </div>
+    </div>
+    <script>
+        const moodButtons = document.querySelectorAll(".mood-btn");
+        moodButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                document.body.style.backgroundColor = this.dataset.color;
+            });
+        });
+    </script>
+</body>
+</html>
