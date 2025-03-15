@@ -14,5 +14,4 @@ A visually appealing and interactive **Daily Mood Tracker** that allows users to
 
 ## 🛠️ Technologies Used  
 - **HTML5** – Structure of the webpage  
-- **CSS3** – Styling, animations, and responsiveness  
-- **JavaScript** – Dynamic background change on mood selection  
+- **CSS3** – Styling, animations, and responsiveness
